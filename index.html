@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hệ thống thông tin quản lý Khai báo Y tế</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="icon" href="images/logoboyte_ad235.png">
+        <link rel='stylesheet' type='text/css' href='css/style.css'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+    </head>
+    <body>
+        <div class="top-rectangle">
+            <div class="container-md">
+                <div class="banner flex-container">
+                        <img src="images/logoboyte_ad235.png" alt="LogoBoYTe" style="height: 80px; width: auto;">
+                        <div class="heading-title" style="margin-left: 5px;">
+                            <div class="bold-title" style="margin-bottom: 5px;">
+                                BAN CHỈ ĐẠO QUỐC GIA
+                            </div>
+                            <div class="bold-title">
+                                PHÒNG CHỐNG DỊCH BỆNH COVID-19
+                            </div>
+                            <div class="bold-title">
+                                HỆ THỐNG QUẢN LÝ KHAI BÁO Y TẾ
+                            </div>
+                        </div>
+                        <img src="images/logo-groups.png" alt="LogoBanNganh" style="margin-left: auto;">
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="container" style="padding-top: 10px;">
+                <div class="register-box">
+                    <div class="registation">
+                        <div class="regist-title">
+                            ĐĂNG KÝ ĐIỂM KIỂM DỊCH!
+                        </div>
+                        <a href="#" >ĐĂNG KÝ</a>
+                    </div>
+                    <a href="#" style="font-size: 20px; font-weight: bold; text-decoration: underline !important; color: black;">Đăng ký điểm kiểm soát QR Code</a>
+                    <div class="btn-login">
+                        <a href="#">
+                            <i class="fa fa-sign-in" style="color: white;"></i>
+                            <span style="margin-left: 5px;">Đăng nhập</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="declare-form">
+                    <h1 style="margin-top: 50px; text-align: center; font-size: 36px; margin-bottom: 20px; font-weight: normal;">Tờ khai Y Tế/Vietnam Health Declaration</h1>
+                    <div class="tab">
+                        <button class="tab-link active" onclick="openTab(event, 'tab-1')">Khai di chuyển nội địa<br/>For domestic move declaration</button>
+                        <button class="tab-link" onclick="openTab(event, 'tab-2')">Cho người nhập cảnh<br/>Entry declaration</button>
+                        <button class="tab-link" onclick="openTab(event, 'tab-3')">Khai báo toàn dân<br/>For domestic guests</button>
+                    </div>
+                    <div class="tab-content" id="tab-1">
+                        <div class="accuracy-form flex-container">
+                            <form>
+                                <div class="form-content">
+                                    <div class="form-title">
+                                        Nhập số điện thoại để xác thực
+                                    </div>
+                                    <input type="tel" placeholder="Nhập số điện thoại" required>
+                                    <a href="#" >Nhận mã OTP</a>
+                                    hoặc đăng nhập bằng
+                                    <div class="btn-icon">
+                                        <a href="#">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" style="background-color: #e94235;">
+                                            <i class="fab fa-google"></i>
+                                        </a>
+                                        <a href="#" style="background-color: #33C6F8;">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-notice">
+                                    Từ ngày 30/4/2021, chức năng Khai di chuyển nội địa của hệ thống Tờ khai y tế có một số thay đổi để giúp người dân thuận tiện hơn trong việc khai báo y tế:
+                                    <br/>1. Bỏ thông tin Thẻ bảo hiểm y tế
+                                    <br/>2. Phương tiện đi lại: để mặc định là Máy bay
+                                    <br/>3. Bỏ thông tin ngày đến
+                                    <br/>4. Thay đổi Mã bảo mật dễ nhìn hơn
+                                    <br/>5. Các dấu hiệu: sốt, ho, khó thở, viêm phổi, đau họng, mệt mỏi được gộp vào khai báo chung.
+                                    <br/>6. Bỏ thông tin khai báo có các bệnh
+                                    <br/>7. Bỏ thông tin khai báo đang mang thai
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="tab-2">
+                        <form>
+                            <div class="main-form">
+                                <div class="language">
+                                    <div class="lang-title">
+                                        Chọn ngôn ngữ để khai báo y tế /Select the language to declare health:
+                                    </div>
+                                    <div class="flags">
+                                        <label>
+                                            <input type="radio" value="vi" name="nation" checked>
+                                            <img alt="Tiếng Việt" src="images/vi-big.png">
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="vi" name="nation">
+                                            <img alt="Tiếng Anh" src="images/en-big.png">
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="vi" name="nation">
+                                            <img alt="Tiếng Trung Quốc" src="images/china-big.png">
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="vi" name="nation">
+                                            <img alt="Tiếng Hàn Quốc" src="images/ko-big.png">
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="vi" name="nation">
+                                            <img alt="Tiếng Ý" src="images/it-big.jpg">
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="vi" name="nation">
+                                            <img alt="Tiếng Campuchia" src="images/cam-big.png">
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="vi" name="nation">
+                                            <img alt="Tiếng Nga" src="images/ru-big.png">
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="vi" name="nation">
+                                            <img alt="Tiếng Tây Ban Nha" src="images/es-big.png">
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="vi" name="nation">
+                                            <img alt="Tiếng Pháp" src="images/fr-big.png">
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="vi" name="nation">
+                                            <img alt="Tiếng Lào" src="images/lo-big.png">
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="vi" name="nation">
+                                            <img alt="Tiếng Nhật" src="images/jp-big_63de0.png">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="declare-form">
+                                    <div class="btn-tutorial">
+                                        <a href="#" id="btn-update">
+                                            <i class="fa fa-edit"></i>
+                                            <span>Cập nhật tờ khai</span>
+                                        </a>
+                                        <a href="#" id="btn-passenger">
+                                            <i class="fa fa-question-circle"></i>
+                                            <span>Hướng dẫn hành khách</span>
+                                        </a>
+                                    </div>
+                                    <div class="form-fields">
+                                        <div class="text-center">
+                                            <b>TỜ KHAI Y TẾ ĐỐI VỚI NGƯỜI NHẬP CẢNH</b>
+                                        </div>
+                                        <div class="text-center" style="font-size: 14px;">
+                                            <b>ĐÂY LÀ TÀI LIỆU QUAN TRỌNG, THÔNG TIN CỦA ANH/CHỊ SẼ GIÚP CƠ QUAN Y TẾ LIÊN LẠC KHI CẦN THIẾT ĐỂ PHÒNG CHỐNG DỊCH BỆNH TRUYỀN NHIỄM</b>
+                                        </div>
+                                        <div class="text-center" style="font-size: 13px; color: red;">
+                                            <b>Khuyến cáo: Khai báo thông tin sai là vi phạm pháp luật Việt Nam và có thể xử lý hình sự</b>
+                                        </div>
+                                        <div class="row" style="margin-top: 60px;">
+                                            <div class="col-md-6">
+                                                <div class="input-field">
+                                                    <label>Đối tượng <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <select>
+                                                        <option value>-Chọn-</option>
+                                                        <option value>Chuyên gia</option>
+                                                        <option value>Người Việt Nam</option>
+                                                        <option value>Học sinh/Sinh viên quốc tế</option>
+                                                        <option value>Khác</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-field">
+                                                    <label>Cửa khẩu <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <select>
+                                                        <option value>-Chọn-</option>
+                                                        <option value>A Pa Chải</option>
+                                                        <option value>A Đớt</option>
+                                                        <option value>Buôn Đôn</option>
+                                                        <option value>Bà Rịa - Vũng Tàu</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input-field">
+                                                    <label>Họ tên (Ghi chữ IN HOA) <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="input-field">
+                                                    <label>Năm sinh <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <select>
+                                                        <option value>1990</option>
+                                                        <option value>2000</option>
+                                                        <option value>2001</option>
+                                                        <option value>2002</option>
+                                                        <option value>2003</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-field">
+                                                    <label>Giới tính <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <select>
+                                                        <option value>-Chọn-</option>
+                                                        <option value>Nam</option>
+                                                        <option value>Nữ</option>
+                                                        <option value>Khác</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-field">
+                                                    <label>Quốc tịch <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <select>
+                                                        <option value>Việt Nam</option>
+                                                        <option value>Lào</option>
+                                                        <option value>Campuchia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input-field">
+                                                    <label>Số hộ chiếu hoặc số CMND hoặc giấy thông hành hợp pháp khác <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input-field">
+                                                    <label>Thông tin đi lại <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <div class="vehicle">
+                                                        <label>
+                                                            <input type="radio" name="vehicle-option">
+                                                            <span>Tàu bay</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="vehicle-option">
+                                                            <span>Tàu thuyền</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="vehicle-option">
+                                                            <span>Ô tô</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="vehicle-option">
+                                                            <span>Khác (Ghi rõ)</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="input-field">
+                                                    <label>Số hiệu phương tiện <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <input type="text" placeholder="VD: VN123">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-field">
+                                                    <label>Số ghế <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="input-field">
+                                                    <label>Ngày khởi hành <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <div class="date-option">
+                                                        <select>
+                                                            <option value>01</option>
+                                                            <option value>02</option>
+                                                            <option value>03</option>
+                                                        </select>
+                                                        <select>
+                                                            <option value>01</option>
+                                                            <option value>02</option>
+                                                            <option value>03</option>
+                                                        </select>
+                                                        <select>
+                                                            <option value>2021</option>
+                                                            <option value>2020</option>
+                                                            <option value>2019</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="input-field">
+                                                    <label>Ngày nhập cảnh <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <div class="date-option">
+                                                        <select>
+                                                            <option value>01</option>
+                                                            <option value>02</option>
+                                                            <option value>03</option>
+                                                        </select>
+                                                        <select>
+                                                            <option value>01</option>
+                                                            <option value>02</option>
+                                                            <option value>03</option>
+                                                        </select>
+                                                        <select>
+                                                            <option value>2021</option>
+                                                            <option value>2020</option>
+                                                            <option value>2019</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="margin-bottom: 10px;">
+                                            <b>Địa điểm khởi hành (Tỉnh/Quốc gia)</b>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="input-field">
+                                                    <label>Quốc gia/ Vùng lãnh thổ <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <select>
+                                                        <option value>-Chọn-</option>
+                                                        <option value>Việt Nam</option>
+                                                        <option value>Nhật Bản</option>
+                                                        <option value>Mỹ</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-field">
+                                                    <label>Tỉnh <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="margin-bottom: 10px;">
+                                            Địa điểm nơi đến (Tỉnh/Quốc gia)
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="input-field">
+                                                    <label>Quốc gia/ Vùng lãnh thổ <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <select>
+                                                        <option value>-Chọn-</option>
+                                                        <option value>Việt Nam</option>
+                                                        <option value>Nhật Bản</option>
+                                                        <option value>Mỹ</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-field">
+                                                    <label>Tỉnh <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input-field" style="padding-top: 15px;">
+                                                    <label>Trong vòng 14 ngày qua, Anh/Chị có đến quốc gia/vùng lãnh thổ nào? <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <input type="text" style="height: 60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="margin-bottom: 10px;">
+                                            <b>Nơi lưu trú sau cách ly tập trung</b>
+                                        </div>
+                                        <div class="row" id="root">
+                                            <div class="col-md-4">
+                                                <div class="input-field">
+                                                    <label>Tỉnh / Thành <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <select id="province-1" onchange="getDistrict(1)">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-field">
+                                                    <label>Quận / Huyện <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <select id="district-1" onchange="getWard(1)">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-field">
+                                                    <label>Phường / Xã <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <select id="ward-1">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input-field">
+                                                    <label>Địa chỉ lưu trú sau cách ly <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="margin-bottom: 10px; margin-top: 20px;">
+                                            <b>Địa chỉ liên lạc tại Việt Nam</b>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="input-field">
+                                                    <label>Tỉnh / Thành <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <select id="province-2" onchange="getDistrict(2)">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-field">
+                                                    <label>Quận / Huyện <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <select id="district-2" onchange="getWard(2)">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-field">
+                                                    <label>Phường / Xã <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <select id="ward-2">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input-field">
+                                                    <label>Địa chỉ nơi ở tại Việt Nam <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="margin-bottom: 10px; font-size: 13px;">
+                                            <i>Số điện thoại bạn sẽ sử dụng tại Việt Nam (Là số Roaming hoặc số Việt Nam)</i>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="input-field">
+                                                    <label>Điện thoại <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-field">
+                                                    <label>Email</label>
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="margin-bottom: 10px;">
+                                            <b>Trong vòng 14 ngày (tính đến thời điểm làm thủ tục xuất cảnh, nhập cảnh, quá cảnh) Anh/Chị có thấy xuất hiện dấu hiệu nào sau đây không?</b>
+                                            <span style="color: red; font-style: italic;">(*)</span>
+                                        </div>
+                                        <div class="table-choice">
+                                            <div class="cols-left">
+                                                <table>
+                                                    <thead>
+                                                        <tr style="background-color: #EEE;">
+                                                            <th>Triệu chứng</th>
+                                                            <th style="width: 70px; text-align: center;">Có</th>
+                                                            <th style="width: 70px; text-align: center;">Không</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                Sốt
+                                                                <span style="color: red; font-style: italic;">(*)</span>
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Ho
+                                                                <span style="color: red; font-style: italic;">(*)</span>
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Khó thở
+                                                                <span style="color: red; font-style: italic;">(*)</span>
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Đau họng
+                                                                <span style="color: red; font-style: italic;">(*)</span>
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="cols-right">
+                                                <table>
+                                                    <thead>
+                                                        <tr style="background-color: #EEE;">
+                                                            <th>Triệu chứng</th>
+                                                            <th style="width: 70px; text-align: center;">Có</th>
+                                                            <th style="width: 70px; text-align: center;">Không</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                Nôn/buồn nôn
+                                                                <span style="color: red; font-style: italic;">(*)</span>
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Tiêu chảy
+                                                                <span style="color: red; font-style: italic;">(*)</span>
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Xuất huyết ngoài da
+                                                                <span style="color: red; font-style: italic;">(*)</span>
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Nổi ban ngoài da
+                                                                <span style="color: red; font-style: italic;">(*)</span>
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input-field">
+                                                    <label>Danh sách vắc-xin hoặc sinh phẩm được sử dụng</label>
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="margin-bottom: 10px;">
+                                            <b>Lịch sử phơi nhiễm: Trong vòng 14 ngày qua, Anh/Chị có</b>
+                                            <span style="color: red; font-style: italic;">(*)</span>
+                                        </div>
+                                        <div class="row" style="margin-bottom: 20px;">
+                                            <div class="col-xs-12">
+                                                <table>
+                                                    <thead>
+                                                        <tr style="background-color: #EEE;">
+                                                            <th></th>
+                                                            <th style="width: 70px; text-align: center;">Có</th>
+                                                            <th style="width: 70px; text-align: center;">Không</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                Đến trang trại chăn nuôi / chợ buôn bán động vật sống / cơ sở giết mổ động vật / tiếp xúc động vật
+                                                                <span style="color: red; font-style: italic;">(*)</span>
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Tiếp xúc gần (&lt2m) với người mắc bệnh viêm đường hô hấp do nCoV
+                                                                <span style="color: red; font-style: italic;">(*)</span>
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                            <td>
+                                                                <input type="radio" style="width: 70px; text-align: center;">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div style="margin-bottom: 10px;">
+                                            <b>Chọn cơ sở cách ly </b>
+                                            <span style="color: red; font-style: italic;">(*)</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input-field">
+                                                    <div class="place">
+                                                        <label>
+                                                            <input type="radio" name="place-option">
+                                                            <span>Cơ sở cách ly tập trung</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="place-option">
+                                                            <span>Cơ sở cách ly tự chọn</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="place-option">
+                                                            <span>Khác</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="margin-bottom: 10px;">
+                                            <b>Phiếu kết quả xét nghiệm/ giấy chứng nhận khỏi covid</b>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="upload-btn">
+                                                    <label>
+                                                        <b>Chọn File</b>
+                                                        <input type="file" style="display: none;">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 input-field">
+                                                <input type="text" placeholder="Ngày xét nghiệm" style="width: 150px; margin-bottom: 10px !important;"><br/>
+                                                <input type="checkbox" style="width: fit-content; display: inline-block !important; margin-right: 10px;"><span>Xác nhận âm tính</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <b>Đăng ký sim sử dụng tại Việt Nam</b>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <ul class="link-sim" style="list-style: none; padding-left: 0;">
+                                                    <li style="margin-right: 30px;">
+                                                        <a href="#">VIETTEL</a>
+                                                    </li>
+                                                    <li style="margin-right: 30px;">
+                                                        <a href="#">VINAPHONE</a>
+                                                    </li>
+                                                    <li style="margin-right: 30px;">
+                                                        <a href="#">MOBIPHONE</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-lg-2">
+                                                <div class="input-field">
+                                                    <label>Mã bảo mật <span style="color: red; font-style: italic;">(*)</span></label>
+                                                    <input type="text" placeholder="Nhập mã bảo mật tại đây">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12" style="color: red; margin-bottom: 20px;">
+                                                Dữ liệu bạn cung cấp hoàn toàn bảo mật và chỉ phục vụ cho việc phòng chống dịch, thuộc quản lý của Ban chỉ đạo quốc gia về Phòng chống dịch Covid-19. Khi bạn nhấn nút "Gửi" là bạn đã hiểu và đồng ý.
+                                            </div>
+                                        </div>
+                                        <div class="btn-submit">
+                                            <button type="submit">GỬI TỜ KHAI</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-content" id="tab-3">
+                        <div class="accuracy-form flex-container">
+                            <form>
+                                <div class="form-content">
+                                    <div class="form-title">
+                                        Nhập số điện thoại để xác thực
+                                    </div>
+                                    <input type="tel" placeholder="Nhập số điện thoại" required>
+                                    <a href="#" >Nhận mã OTP</a>
+                                    hoặc đăng nhập bằng
+                                    <div class="btn-icon">
+                                        <a href="#">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" style="background-color: #e94235;">
+                                            <i class="fab fa-google"></i>
+                                        </a>
+                                        <a href="#" style="background-color: #33C6F8;">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-notice">
+                                    Từ ngày 30/4/2021, chức năng Khai di chuyển nội địa của hệ thống Tờ khai y tế có một số thay đổi để giúp người dân thuận tiện hơn trong việc khai báo y tế:
+                                    <br/>1. Bỏ thông tin Thẻ bảo hiểm y tế
+                                    <br/>2. Phương tiện đi lại: để mặc định là Máy bay
+                                    <br/>3. Bỏ thông tin ngày đến
+                                    <br/>4. Thay đổi Mã bảo mật dễ nhìn hơn
+                                    <br/>5. Các dấu hiệu: sốt, ho, khó thở, viêm phổi, đau họng, mệt mỏi được gộp vào khai báo chung.
+                                    <br/>6. Bỏ thông tin khai báo có các bệnh
+                                    <br/>7. Bỏ thông tin khai báo đang mang thai
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid" style="background-color: #2d3091; margin-top: 100px;">
+                <div class="container footer">
+                    <div class="row" style="padding: 10px 0;">
+                        <div class="col-md-6 bot-left">
+                            <p>
+                                <a href="#">Video hướng dẫn Khai báo y tế nhập cảnh</a>
+                            </p>
+                            <p>
+                                <a href="#">Video hướng dẫn Khai báo y tế nội địa</a>
+                            </p>
+                            <p>
+                                <a href="#">Video hướng dẫn Khai báo y tế tại điểm kiểm soát dịch</a>
+                            </p>
+                        </div>
+                        <div class="col-md-6 bot-right">
+                            <p>
+                                <a href="#">Phần dành cho cán bộ quản lý</a>
+                            </p>
+                            <p>
+                                <i class="fa fa-sign-in" style="color: white;"></i>
+                                <a href="#">Đăng nhập</a>
+                            </p>
+                            <p>
+                                <a href="#">Hướng dẫn sử dụng</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/action.js" rel="stylesheet"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/857d8a8904.js" crossorigin="anonymous"></script>
+        <script src="js/app.js" rel="stylesheet"></script>
+    </body>
+</html>

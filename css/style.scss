@@ -1,0 +1,507 @@
+$light-blue: #33C6F8;
+$bold-blue: #266BD1;
+$very-bold-blue: #2d3091;
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(234, 234, 234);
+    height: auto;
+    font-family: Arial;
+}
+
+body a{
+    text-decoration: none !important;
+}
+
+.top-rectangle{
+    background: url("../images/trongdong.png") center no-repeat;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    background-color: $bold-blue;
+}
+
+.banner{
+    background-position: center;
+    background-size: 800px;
+    padding: 16px 0;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img{
+    max-width: 100%;
+}
+
+.bold-title{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+    .top-rectangle{
+        background: none;
+        background-color: $bold-blue;
+    }
+
+    .banner{
+        background: url("../images/banner_vi_01945.png") no-repeat;
+        background-position: right;
+        padding: 5px 0;
+    }
+
+    .flex-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bold-title{
+        text-align: left;
+    }
+}
+
+.main-content{
+    background-color: rgb(234, 234, 234);
+}
+
+.registation{
+    margin-bottom: 10px;
+    background-color: $light-blue;
+    border-radius: 7px;
+    color: white;
+    padding: 20px;
+}
+
+.regist-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn{
+    color: white;
+    padding: 7px 20px;
+    background-color: $bold-blue;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.registation a{
+    @extend .btn;
+}
+
+.registation a:hover{
+    color: white;
+    background-color: $very-bold-blue;
+}
+
+.btn-login{
+    position: relative;
+}
+
+.btn-login a{
+    @extend .btn;
+    padding: 5px 15px;
+    font-size: 15px;
+    right: 0;
+    top: 10px;
+    position: absolute;
+}
+
+.btn-login a:hover{
+    color: white;
+    background-color: $very-bold-blue;
+}
+
+@media screen and (min-width: 769px) {
+    .registation{
+        position: relative;
+    }
+
+    .registation a{
+        top: 25px;
+        right: 20px;
+        position: absolute;
+    }
+}
+
+.tab{
+    @extend .flex-container;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.tab button{
+    background-color: rgb(234, 234, 234);
+    border: none;
+    flex: 1 1 0px;
+    padding: 10px;
+}
+
+.tab button:hover {
+    color: red;
+    background-color: rgb(238, 238, 238);
+}
+
+.tab button.active{
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.tab button.active:hover{
+    color: black;
+}
+
+.tab-content{
+    background-color: white;
+}
+
+.form-content{
+    @extend .flex-container;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.form-title{
+    color: #777;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.form-content a{
+    @extend .btn;
+    font-weight: normal;
+    font-size: 15px;
+    padding: 8px 60px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.form-content input{
+    width: 280px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.btn-icon a{
+    display: inline-block;
+    padding: 0 !important;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    margin: 10px 5px;
+}
+
+.btn-icon a:hover{
+    background-color: red !important;
+}
+
+.btn-icon i{
+    line-height: 40px;
+}
+
+.text-notice{
+    margin: 20px 10px;
+}
+
+@media screen and (min-width: 769px) {
+    .text-notice{
+        margin: 30px 200px 60px;
+        font-size: 14px;
+    }
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.footer a:hover{
+    color: white;
+}
+
+.footer p{
+    margin-bottom: 8px;
+}
+
+.bot-left{
+    text-align: right;
+}
+
+.bot-right{
+    text-align: right;
+}
+
+@media screen and (min-width: 769px) {
+    .bot-left{
+        text-align: left;
+    }
+}
+
+.language{
+    padding: 0px 10px 30px;
+}
+
+.lang-title{
+    margin-right: 130px;
+    text-align: justify;
+}
+
+.lang-title{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.flags label{
+    margin-right: 8px;
+}
+
+.flags img{
+    padding: 3px;
+    border: 2px solid #dbd6d6;
+}
+
+@media screen and (max-width: 768px){
+    .flags img{
+        max-width: 40px;
+        max-height: 30px;
+    }
+}
+
+.flags input{
+    display: none;
+}
+
+.flags input:checked + img{
+    border: 2px solid blue !important;
+}
+
+.main-form{
+    position: relative;
+    padding-top: 30px;
+}
+
+.btn-tutorial{
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+
+.declare-form{
+    padding: 0px 10px 30px;
+}
+
+#btn-update{
+    padding: 6px 12px;
+    background-color: $bold-blue;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#btn-passenger{
+    padding: 6px 12px;
+    color: $bold-blue;
+    border: 1px solid #dbd6d6;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#btn-update:hover{
+    background-color: $very-bold-blue;
+}
+
+#btn-passenger:hover{
+    background-color:#ccc;
+}
+
+#btn-update span{
+    display: none;
+}
+
+#btn-passenger span{
+    display: none;
+}
+
+@media screen and (min-width: 769px) {
+    #btn-update span{
+        display: inline-block;
+    }
+    
+    #btn-passenger span{
+        display: inline-block;
+    }
+}
+
+.text-center{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-field label, select, input{
+    width: 100%;
+}
+
+.input-field select{
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.input-field input{
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.vehicle{
+    @extend .flex-container;
+    flex-direction: row;
+    width: 100%;
+}
+
+.vehicle label{
+    width: fit-content;
+    padding-left: 10px;
+    vertical-align: middle !important;
+}
+
+.vehicle input, .place input{
+    display: inline-block !important;
+    width: fit-content;
+}
+
+.date-option{
+    @extend .flex-container;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.date-option select{
+    max-width: 108px;
+}
+
+@media screen and (min-width: 769px) {
+    .date-option select{
+        max-width: 200px;
+    }
+}
+
+#tab-2, #tab-3{
+    display: none;
+}
+
+.table-choice{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.table-choice div{
+    flex: 1;
+}
+
+.cols-right thead{
+    display: none;
+}
+
+@media screen and (min-width: 769px) {
+    .table-choice{
+        flex-direction: row;
+    }
+    .cols-right thead{
+        display: table-header-group;
+    }
+}
+
+.table-choice table, .row table{
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.table-choice table th, .table-choice table td, 
+.row table th, .row table td{
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.table-choice table td, .row table td{
+    height: 70px;
+}
+
+.place{
+    @extend .flex-container;
+    flex-direction: column;
+}
+
+.upload-btn{
+    width: 150px;
+    height: 150px;
+    border: 4px dashed #777;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.upload-btn label{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.link-sim{
+    @extend .flex-container;
+    flex-direction: row;
+}
+
+.btn-submit{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-submit button{
+    padding: 10px 20px;
+    background-color: #2ca01c;
+    border: 1px solid #2ca01c;
+    border-radius: 20px;
+    color: white;
+}
+
+.btn-submit button:hover{
+    background-color: #1c8d0d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
